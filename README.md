@@ -5,40 +5,44 @@ WordPressのテーマをgulpで作成するためのものです。
 # 出来ること
 - SCSSのコンパイル
 - ブラウザシンク
-- 画像の圧縮
 - CSSの圧縮
 - JSの圧縮
-- スタイルガイドの作成（[aigis](https://pxgrid.github.io/aigis/)を使用しています。）
 
 # 使い方
 
 ## インストール
 ```
-git clone https://github.com/contiki9/wp-theme-template.git
+git clone https://github.com/popopi/blog.git
 ```
 clone後WordPressの本体をインストールしてください。
 
 
-下記コマンドはnode.jsとgulpをインストールした上でしてください。
+下記コマンドはnode.jsとgulpをインストールした上で行う
 ```
 npm install
 ```
 ## 各タスク
 
 ###デフォルトのタスクの起動
-これで、SCSSのコンパイル、画像圧縮、JSの圧縮のタスクが動きます。
+これで、ローカルホスト起動とscss、jsの圧縮ができるけど、あんまり使わないで。
 ```
 gulp
 ```
 
 ###ブラウザシンク
-デフォルトのタスクに加え、ブラウザシンクのタスクが起動します。
+ブラウザシンクのタスクが起動します。
 ```
-gulp sync
+gulp server
 ```
 
-###スタイルガイド
-スタイルガイドがコンパイルされます。
+###scssのコンパイル
+scssがコンパイルされる、あとフロントノートも更新される
 ```
-gulp styleguide
+gulp sass
+```
+
+###jsのコンパイル
+jsがコンパイル、圧縮される
+```
+gulp js
 ```
