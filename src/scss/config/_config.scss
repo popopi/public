@@ -40,6 +40,14 @@ ul {
 .c-white {
 	color: #fff;
 }
+input,  
+textarea, 
+select {
+    outline: none;
+}
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+}
 @media screen and (max-width: 585px) {
 	.hdg-lv2 {
 		font-size: 24px;
