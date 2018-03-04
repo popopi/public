@@ -14,32 +14,55 @@
 
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js no-svg">
-<head>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="profile" href="http://gmpg.org/xfn/11">
-
-<?php wp_head(); ?>
-</head>
+  <head>
+    <meta charset="<?php bloginfo( 'charset' ); ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <?php if(is_home()): ?>
+      <!-- トップページ -->
+      <title>POPOIPOIPOSU</title>
+      <?php elseif(is_page()): ?>
+      <!-- 固定ページのタイトル -->
+      <title>POPOIPOIPOSU</title>
+      <?php elseif(is_single()): ?>
+      <!-- 投稿ページのタイトル -->
+      <title>POPOIPOIPOSU | <?php the_title_attribute(); ?></title>
+      <?php elseif(is_category()): ?>
+      <!-- カテゴリーページのタイトル -->
+      <title>POPOIPOIPOSU</title>
+      <?php elseif(is_month()): ?>
+      <!-- 月別ページのタイトル -->
+      <title>POPOIPOIPOSU</title>
+      <?php elseif(is_year()): ?>
+      <!-- 年別ページのタイトル -->
+      <title>POPOIPOIPOSU</title>
+      <?php elseif(is_search()): ?>
+      <!-- 検索結果ページのタイトル -->
+      <title>POPOIPOIPOSU</title>
+      <?php else: ?>
+      <!-- それ以外ページのタイトル -->
+      <title>POPOIPOIPOSU</title>
+      <?php endif; ?>    
+  </head>
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentyseventeen' ); ?></a>
-
-	<header id="masthead" class="site-header" role="banner">
-
-		<?php get_template_part( 'template-parts/header/header', 'image' ); ?>
-
-		<?php if ( has_nav_menu( 'top' ) ) : ?>
-			<div class="navigation-top">
-				<div class="wrap">
-					<?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
-				</div><!-- .wrap -->
-			</div><!-- .navigation-top -->
-		<?php endif; ?>
-
-	</header><!-- #masthead -->
-
+  <header>
+    <div class="header-logo">
+      <a href="/"><img src="/wp-content/themes/twentyseventeen/assets/images/popoi-logo.png" alt="popoipoiposu"></a>
+    </div>
+    <div class="header-search">
+      <form role="search" method="get" class="search-form" action="http://popoipoiposu.local/">
+        <label for="search-form-5a9b7d77d76cf">
+          <span class="screen-reader-text">キーワード / タグで検索</span>
+        </label>
+        <input type="search" id="search-form-5a9b7d77d76cf" class="search-field" placeholder="キーワード / タグで検索" value="" name="s">
+        <button type="submit" class="search-submit">
+          <svg class="icon icon-search" aria-hidden="true" role="img"><use href="#icon-search" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-search"></use></svg>
+          <span class="screen-reader-text">Search</span>
+        </button>
+      </form>
+    </div>
+  </header>
 	<?php
 
 	/*
