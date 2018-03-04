@@ -17,36 +17,39 @@
   <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-      <?php if(is_home()): ?>
+    <?php if(is_home()): ?>
       <!-- トップページ -->
       <title>POPOIPOIPOSU</title>
-      <?php elseif(is_page()): ?>
-      <!-- 固定ページのタイトル -->
+    <?php elseif(is_page()): ?>
+      <!-- 固定ページ -->
       <title>POPOIPOIPOSU</title>
-      <?php elseif(is_single()): ?>
-      <!-- 投稿ページのタイトル -->
+    <?php elseif(is_single()): ?>
+      <!-- 投稿ページ -->
       <title>POPOIPOIPOSU | <?php the_title_attribute(); ?></title>
-      <?php elseif(is_category()): ?>
-      <!-- カテゴリーページのタイトル -->
+    <?php elseif(is_category()): ?>
+      <!-- カテゴリーページ -->
       <title>POPOIPOIPOSU</title>
-      <?php elseif(is_month()): ?>
-      <!-- 月別ページのタイトル -->
+    <?php elseif(is_month()): ?>
+      <!-- 月別ページ -->
       <title>POPOIPOIPOSU</title>
-      <?php elseif(is_year()): ?>
-      <!-- 年別ページのタイトル -->
+    <?php elseif(is_year()): ?>
+      <!-- 年別ページ -->
       <title>POPOIPOIPOSU</title>
-      <?php elseif(is_search()): ?>
-      <!-- 検索結果ページのタイトル -->
+    <?php elseif(is_search()): ?>
+      <!-- 検索結果ページ -->
       <title>POPOIPOIPOSU</title>
-      <?php else: ?>
-      <!-- それ以外ページのタイトル -->
+    <?php else: ?>
+      <!-- それ以外ページ -->
       <title>POPOIPOIPOSU</title>
-      <?php endif; ?>    
+    <?php endif; ?>
+    
+      <link rel="stylesheet" href="/wp-content/themes/twentyseventeen/assets/css/common.css">
+      <link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet" />
   </head>
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-  <header>
+  <header class="header">
     <div class="header-logo">
       <a href="/"><img src="/wp-content/themes/twentyseventeen/assets/images/popoi-logo.png" alt="popoipoiposu"></a>
     </div>
@@ -56,7 +59,7 @@
           <span class="screen-reader-text">キーワード / タグで検索</span>
         </label>
         <input type="search" id="search-form-5a9b7d77d76cf" class="search-field" placeholder="キーワード / タグで検索" value="" name="s">
-        <button type="submit" class="search-submit">
+        <button type="submit" class="btn-search">
           <svg class="icon icon-search" aria-hidden="true" role="img"><use href="#icon-search" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-search"></use></svg>
           <span class="screen-reader-text">Search</span>
         </button>

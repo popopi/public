@@ -18,13 +18,13 @@ gulp.task("server", function() {
 gulp.task("sass", function() {
     gulp.src("src/scss/common.scss")
         .pipe(plumber())
-        .pipe(frontnote({css: '../dist/assets/css/common.css'}))
+        .pipe(frontnote({css: '../wp-content/themes/twentyseventeen/assets/css/common.css'}))
         .pipe(sass())
         .pipe(autoprefixer())
 		.pipe(minifyCSS({
 		  	keepBreaks: false
 		}))
-        .pipe(gulp.dest("dist/assets/css"))
+        .pipe(gulp.dest("wp-content/themes/twentyseventeen/assets/css"))
         .pipe(browser.reload({stream:true}));
 });
 
