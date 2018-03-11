@@ -1,14 +1,29 @@
 footer {
-	width: 100%;
-	background: #1E88E5;
-	padding: 16px 0 14px;
-	margin-bottom: 103px;
-	@media screen and (max-width: 585px) {
-		margin-bottom: 82px;
-	}
-	.copy {
-		color: #fff;
-		text-align: center;
-		font-size: 14px;
-	}
+  width: 100%;
+  background: #666666;
+  color: #fff;
+  padding: 40px 0 35px;
+  margin: 120px 0 0;
+  .footer-content {
+    width: 216px;
+    margin: 0 auto;
+    p {
+      text-align: center;
+    }
+    a {
+      color: #fff;
+      font-size: 12px;
+      text-decoration: none;
+    }
+    &-inq {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: solid #999999 1px;
+    }
+  }
+  .copy {
+    margin-top: 30px;
+    font-size: 12px;
+    text-align: center;
+  }
 }
