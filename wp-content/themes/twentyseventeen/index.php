@@ -17,6 +17,38 @@
 
 get_header(); ?>
 
+<main>
+  <div class="main-slider">
+    <?php query_posts('showposts=3'); 
+      if (have_posts()) : 
+      while (have_posts()) : 
+      the_post(); ?>
+    <li>
+      <a href="<?php the_permalink() ?>">
+        <?php the_post_thumbnail(); ?>
+        <div class="main-slider-content">
+          <div class="main-slider-content__inner">
+            <p class="main-slider-date"><?php the_time('Y/m/d'); ?></p>
+            <p class="main-slider-ttl"><?php the_title(); ?></p>
+            <ul class="main-slider-lst">
+            <?php $posttags = get_the_tags();
+              if ($posttags) {
+                foreach($posttags as $tag) {
+                echo '<li>' . $tag->name . '</li>';
+                }
+              } ?>
+            </ul>
+          </div>
+        </div>
+      </a>
+    </li>
+    <?php
+    endwhile;
+    endif;
+    ?>
+  </div>
+</main>
+
 <div class="wrap">
 	<?php if ( is_home() && ! is_front_page() ) : ?>
 		<header class="page-header">

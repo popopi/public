@@ -32,7 +32,7 @@ gulp.task("js", function() {
     gulp.src(["src/js/**/*.js"])
 		.pipe(plumber())
         .pipe(uglify())
-        .pipe(gulp.dest("dist/assets/js"))
+        .pipe(gulp.dest('wp-content/themes/twentyseventeen/assets/js/'))
         .pipe(browser.reload({stream:true}));
 });
 

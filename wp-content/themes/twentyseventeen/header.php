@@ -45,6 +45,8 @@
     
       <link rel="stylesheet" href="/wp-content/themes/twentyseventeen/assets/css/common.css">
       <link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet" />
+      <script type="text/javascript" src="/wp-content/themes/twentyseventeen/assets/js/jquery.js"></script>
+      <script type="text/javascript" src="/wp-content/themes/twentyseventeen/assets/js/common.js"></script>
   </head>
 
 <body <?php body_class(); ?>>
