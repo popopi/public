@@ -17,11 +17,17 @@ ul {
 	padding: 0;
 }
 
-.hdg-lv2 {
-	text-align: center;
-	font-size: 28px;
-    font-weight: bold;
-	margin-bottom: 20px;
+.hdg-lv1 {
+  font-size: 48px;
+  color: #999999;
+}
+.hdg-main {
+  vertical-align: middle;
+}
+.hdg-txt {
+  font-size: 18px;
+  vertical-align: middle;
+  margin-left: 10px;
 }
 .hdg-lv3 {
 	font-size: 21px;
@@ -56,4 +62,22 @@ input:-webkit-autofill {
 	.hdg-lv3 {
 		font-size: 18px;
 	}
+}
+.tag-lst{
+  margin: 6px 0 0;
+  padding: 0;
+  font-size: 0;
+  font-size: 0;
+  li {
+    display: inline-block;
+    list-style: none;
+    font-size: 12px;
+    color: #83ecd4;
+    border: solid 1px #83ecd4;
+    margin-right: 10px;
+    padding: 2px 5px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }

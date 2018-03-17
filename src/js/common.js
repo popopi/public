@@ -4,9 +4,10 @@ $(function() {
   $('.main-slider').slick({
     dots: true,
     infinite: true,
-    speed: 300,
+    speed: 600,
     slidesToShow: 1,
     arrows: false,
-    adaptiveHeight: true
+    adaptiveHeight: true,
+    autoplay: true,
   });
 });

@@ -30,7 +30,7 @@ get_header(); ?>
           <div class="main-slider-content__inner">
             <p class="main-slider-date"><?php the_time('Y/m/d'); ?></p>
             <p class="main-slider-ttl"><?php the_title(); ?></p>
-            <ul class="main-slider-lst">
+            <ul class="tag-lst">
             <?php $posttags = get_the_tags();
               if ($posttags) {
                 foreach($posttags as $tag) {
@@ -50,18 +50,10 @@ get_header(); ?>
 </main>
 <?php get_template_part('/banner/top-banner'); ?>
 <div class="wrap">
-	<?php if ( is_home() && ! is_front_page() ) : ?>
-		<header class="page-header">
-			<h1 class="page-title"><?php single_post_title(); ?></h1>
-		</header>
-	<?php else : ?>
-	<header class="page-header">
-		<h2 class="page-title"><?php _e( 'Posts', 'twentyseventeen' ); ?></h2>
-	</header>
-	<?php endif; ?>
+  <h2 class="hdg-lv1"><span class="hdg-main">読ム</span><span class="hdg-txt">カテゴリーから選択</span></h2>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+		<div class="site-main" role="main">
 
 			<?php
 			if ( have_posts() ) :
@@ -74,26 +66,23 @@ get_header(); ?>
 					 * If you want to override this in a child theme, then include a file
 					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 					 */
-					get_template_part( 'template-parts/post/content', get_post_format() );
+					get_template_part( 'template-parts/post/content_top', get_post_format() );
 
 				endwhile;
-
-				the_posts_pagination( array(
-					'prev_text' => twentyseventeen_get_svg( array( 'icon' => 'arrow-left' ) ) . '<span class="screen-reader-text">' . __( 'Previous page', 'twentyseventeen' ) . '</span>',
-					'next_text' => '<span class="screen-reader-text">' . __( 'Next page', 'twentyseventeen' ) . '</span>' . twentyseventeen_get_svg( array( 'icon' => 'arrow-right' ) ),
-					'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentyseventeen' ) . ' </span>',
-				) );
-
 			else :
 
 				get_template_part( 'template-parts/post/content', 'none' );
 
 			endif;
 			?>
-
-		</main><!-- #main -->
+            <div class="content-more">
+              <a href="#" class="content-more_lnk">
+                もっと見る
+              </a>
+          </div>
+          <?php get_template_part('/banner/middle-banner'); ?>
+		</div><!-- #main -->
 	</div><!-- #primary -->
-	<?php get_sidebar(); ?>
 </div><!-- .wrap -->
 
 <?php get_footer();

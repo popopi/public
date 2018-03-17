@@ -1,35 +1,51 @@
-article {
-	.art-box {
-		padding: 30px 10px;
-		box-sizing: border-box;
-		@media screen and (max-width: 585px) {
-			padding: 15px 10px 20px;
-		}
-	}
+.site-main {
+  max-width: 1000px;
+  width: 80%;
+  display:flex;
+  flex-wrap:wrap;
 }
-.bg {
-	&-brown { background: #d7ccc8; }
-	&-career { 
-		position: relative;
-		background: rgba(255,255,255,0.6);
-		overflow: hidden;
-		&:before {
-			content: "";
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			left: 0;
-			top: 0;
-			z-index: -1;
-			display: block;
-			background: url("/assets/images/bg-career.png");
-			@media screen and (min-width: 769px) {
-				background-attachment: fixed;
-			}
-			filter: blur(3px);
-		}
-	}
+.entry {
+  &-article {
+    width: 48%;
+    &:nth-child(2n) {
+      margin-left: 4%;
+    }
+  }
+  &-header {
+    margin-bottom: 20px;
+    .post-thumbnail {
+      position: relative;
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+  &-content {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 5px;
+    background: rgba(0,0,0,.3);
+    padding: 10px 5px 5px;
+    box-sizing: border-box;
+  }
 }
-@import "article/skill";
-@import "article/career";
-@import "article/profile";
+.content-more {
+  width: 100%;
+  &_lnk{
+    display: block;
+    max-width: 334px;
+    width: 80%;
+    margin: 0 auto;
+    border: solid 1px #666666;
+    text-decoration: none;
+    color: #666666;
+    padding: 10px 0;
+    text-align: center;
+  }
+}

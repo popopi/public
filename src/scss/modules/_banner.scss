@@ -3,7 +3,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  margin: 50px auto 0;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+.middle-banner {
+  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto 40px;
   img {
     width: 100%;
     height: auto;
