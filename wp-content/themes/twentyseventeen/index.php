@@ -48,7 +48,7 @@ get_header(); ?>
     ?>
   </div>
 </main>
-
+<?php get_template_part('/banner/top-banner'); ?>
 <div class="wrap">
 	<?php if ( is_home() && ! is_front_page() ) : ?>
 		<header class="page-header">

@@ -584,3 +584,30 @@ require get_parent_theme_file_path( '/inc/customizer.php' );
  * SVG icons functions and filters.
  */
 require get_parent_theme_file_path( '/inc/icon-functions.php' );
+
+$args = array(
+    'label' => '上部バナー',//投稿タイプの名前
+    'labels' => array(
+        'singular_name' => '上部バナー',//投稿タイプの名前
+        'menu_name' => '上部バナー',//メニュー（画面の左）に表示するラベル
+        'add_new_item' => '新規投稿を追加',//新規作成ページの左上に表示されるタイトル
+        'add_new' => '新規追加',//メニュー（画面の左）の「新規」の位置に表示するラベル
+        'new_item' => '新規投稿',//一覧ページの右上にある新規作成ボタンのラベル
+        'edit_item'=>'投稿を編集',//編集ページの左上にあるタイトル
+        'view_item' => '投稿を表示',//編集ページの「○○を表示」ボタンのラベル
+        'not_found' => '投稿は見つかりませんでした',//カスタム投稿を追加していない状態で、カスタム投稿一覧ページを開いたときに表示されるメッセージ
+        'not_found_in_trash' => 'ゴミ箱に投稿はありません。',//カスタム投稿をゴミ箱に入れていない状態で、カスタム投稿のゴミ箱ページを開いたときに表示されるメッセージ
+        'search_items' => '投稿を検索',//一覧ページの検索ボタンのラベル
+    ),
+ 
+    'public' => true,//ユーザーが管理画面で入力するか設定
+    'publicly_queryable' => true,//カスタム投稿タイプの機能でページを生成するかどうかを指定
+    'show_ui' => true,//管理画面にこのカスタム投稿タイプのページを表示するか設定
+    'show_in_menu' => true,//管理画面にメニュー出すか設定
+    'query_var' => true,
+    'has_archive' => true,//「true」に指定すると投稿した記事の一覧ページ（投稿タイプのトップページ）を作成することができる
+    'hierarchical' => false,//カスタム投稿に固定ページのような親子関係（階層）を持たせるか設定
+    'menu_position' => 5,//カスタム投稿のメニューを追加する位置を整数で指定
+    'rewrite' => true,//リライト設定
+);
+register_post_type("top-banner",$args);
