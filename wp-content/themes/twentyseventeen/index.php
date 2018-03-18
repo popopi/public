@@ -52,10 +52,10 @@ get_header(); ?>
 <div class="wrap">
   <h2 class="hdg-lv1"><span class="hdg-main">読ム</span><span class="hdg-txt">カテゴリーから選択</span></h2>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area clearfix">
 		<div class="site-main" role="main">
 
-			<?php
+			<?php query_posts('showposts=60'); 
 			if ( have_posts() ) :
 
 				/* Start the Loop */
@@ -81,7 +81,20 @@ get_header(); ?>
               </a>
           </div>
           <?php get_template_part('/banner/middle-banner'); ?>
+          <h2 class="hdg-lv1"><span class="hdg-main">探ス</span><span class="hdg-txt">タグから選択</span></h2>
+          <ul class="tag-lst">
+            <?php
+            $posttags = get_tags();
+            if ($posttags) {
+            foreach($posttags as $tag) {
+            echo '<li><a href="'. get_tag_link($tag->term_id) .'">' . $tag->name . '</a>'. "</li>";
+            }
+            }
+            ?>
+          </ul>
+          <?php get_template_part('/banner/bottom-banner'); ?>
 		</div><!-- #main -->
+        <?php get_template_part('/banner/side-banner'); ?>
 	</div><!-- #primary -->
 </div><!-- .wrap -->
 

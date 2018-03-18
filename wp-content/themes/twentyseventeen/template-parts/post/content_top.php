@@ -1,17 +1,3 @@
-<?php
-/**
- * Template part for displaying posts
- *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
- * @package WordPress
- * @subpackage Twenty_Seventeen
- * @since 1.0
- * @version 1.2
- */
-
-?>
-
 <article class="entry-article" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
   <div class="entry-header">
     <?php if ( '' !== get_the_post_thumbnail() && ! is_single() ) : ?>
@@ -24,14 +10,7 @@
           </div>
 		</a>
       </div><!-- .post-thumbnail -->
-    <ul class="tag-lst">
-    <?php $posttags = get_the_tags();
-              if ($posttags) {
-                foreach($posttags as $tag) {
-                echo '<li>' . $tag->name . '</li>';
-                }
-              } ?>
-    </ul>
+   <?php the_tags('<ul class="tag-lst"><li>','</li><li>','</li></ul>'); ?>
 	<?php endif; ?>
   </div><!-- .entry-header -->
 </article><!-- #post-## -->
