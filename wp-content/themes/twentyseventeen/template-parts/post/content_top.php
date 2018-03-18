@@ -1,4 +1,4 @@
-<article class="entry-article" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article <?php post_class('entry-article'); ?> id="post-<?php the_ID(); ?>">
   <div class="entry-header">
     <?php if ( '' !== get_the_post_thumbnail() && ! is_single() ) : ?>
       <div class="post-thumbnail">

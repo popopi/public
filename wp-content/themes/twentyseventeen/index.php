@@ -51,10 +51,16 @@ get_header(); ?>
 <?php get_template_part('/banner/top-banner'); ?>
 <div class="wrap">
   <h2 class="hdg-lv1"><span class="hdg-main">読ム</span><span class="hdg-txt">カテゴリーから選択</span></h2>
-
+  <div class="wrap-search">
+    <ul>
+      <li class="js-comic is-active">COMIC</li>
+      <li class="js-anime">ANIME</li>
+      <li class="js-app">APP</li>
+      <li class="js-pachinko">PACHINKO</li>
+    </ul>
+  </div>
 	<div id="primary" class="content-area clearfix">
-		<div class="site-main" role="main">
-
+		<div class="site-main js-comic" role="main">
 			<?php query_posts('showposts=60'); 
 			if ( have_posts() ) :
 
