@@ -33,6 +33,7 @@ get_header(); ?>
           }
         ?>
       </ul>
+      <?php get_template_part('/inc/btn'); ?>
       <h1 class="hdg"><?php echo get_the_title(); ?></h1> 
       <?php get_template_part('/banner/top-banner'); ?>
       <?php if ( have_posts() ) : ?>

@@ -142,3 +142,13 @@
     }
   }
 }
+.list_article {
+  .entry {
+    &-article {
+      display: block;
+    }
+  }
+  &_pager {
+    width: 100%;
+  }
+}
