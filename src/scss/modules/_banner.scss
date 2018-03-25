@@ -29,3 +29,17 @@
     height: auto;
   }
 }
+@media screen and (max-width: 768px) {
+  .top-banner {
+    margin: 0 auto 0;
+  }
+  .middle-banner {
+    margin: 20px auto 10px;
+    &._bottom {
+      display: none;
+    }
+  }
+  .side-banner {
+    display: none;
+  }
+}

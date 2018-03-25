@@ -18,7 +18,7 @@
 get_header(); ?>
 
 <main>
-  <div class="main-slider">
+  <ul class="main-slider">
     <?php query_posts('showposts=3'); 
       if (have_posts()) : 
       while (have_posts()) : 
@@ -30,7 +30,7 @@ get_header(); ?>
           <div class="main-slider-content__inner">
             <p class="main-slider-date"><?php the_time('Y/m/d'); ?></p>
             <p class="main-slider-ttl"><?php the_title(); ?></p>
-            <ul class="tag-lst">
+            <ul class="tag-lst sp-hide">
             <?php $posttags = get_the_tags();
               if ($posttags) {
                 foreach($posttags as $tag) {
@@ -46,7 +46,7 @@ get_header(); ?>
     endwhile;
     endif;
     ?>
-  </div>
+  </ul>
 </main>
 <?php get_template_part('/banner/top-banner'); ?>
 <div class="wrap">
@@ -87,17 +87,7 @@ get_header(); ?>
               </a>
           </div>
           <?php get_template_part('/banner/middle-banner'); ?>
-          <h2 class="hdg-lv1"><span class="hdg-main">探ス</span><span class="hdg-txt">タグから選択</span></h2>
-          <ul class="tag-lst">
-            <?php
-            $posttags = get_tags();
-            if ($posttags) {
-            foreach($posttags as $tag) {
-            echo '<li><a href="'. get_tag_link($tag->term_id) .'">' . $tag->name . '</a>'. "</li>";
-            }
-            }
-            ?>
-          </ul>
+          <?php get_template_part('/inc/content-search-bot'); ?>
           <?php get_template_part('/banner/bottom-banner'); ?>
 		</div><!-- #main -->
         <?php get_template_part('/banner/side-banner'); ?>

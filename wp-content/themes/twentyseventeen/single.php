@@ -11,33 +11,43 @@
  */
 
 get_header(); ?>
+<?php
+	if ( ( is_single() || ( is_page() && ! twentyseventeen_is_frontpage() ) ) && has_post_thumbnail( get_queried_object_id() ) ) :
+		echo '<div class="single-featured-image-header">';
+		echo get_the_post_thumbnail( get_queried_object_id(), 'twentyseventeen-featured-image' );
+		echo '</div><!-- .single-featured-image-header -->';
+	endif;
+?>
 
-<div class="wrap">
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
-
-				get_template_part( 'template-parts/post/content', get_post_format() );
-
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
-
-				the_post_navigation( array(
-					'prev_text' => '<span class="screen-reader-text">' . __( 'Previous Post', 'twentyseventeen' ) . '</span><span aria-hidden="true" class="nav-subtitle">' . __( 'Previous', 'twentyseventeen' ) . '</span> <span class="nav-title"><span class="nav-title-icon-wrapper">' . twentyseventeen_get_svg( array( 'icon' => 'arrow-left' ) ) . '</span>%title</span>',
-					'next_text' => '<span class="screen-reader-text">' . __( 'Next Post', 'twentyseventeen' ) . '</span><span aria-hidden="true" class="nav-subtitle">' . __( 'Next', 'twentyseventeen' ) . '</span> <span class="nav-title">%title<span class="nav-title-icon-wrapper">' . twentyseventeen_get_svg( array( 'icon' => 'arrow-right' ) ) . '</span></span>',
-				) );
-
-			endwhile; // End of the loop.
-			?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-	<?php get_sidebar(); ?>
+<div class="wrap detail">
+  <div id="primary" class="content-area clearfix">
+	<div class="site-main">
+      <p class="detail-date"><?php the_time('Y/m/d'); ?></p>
+      <ul class="tag-lst lst_detail">
+        <?php
+          $posttags = get_tags();
+            if ($posttags) {
+              foreach($posttags as $tag) {
+              echo '<li><a href="'. get_tag_link($tag->term_id) .'">' .   $tag->name . '</a>'. "</li>";
+            }
+          }
+        ?>
+      </ul>
+      <h1 class="hdg"><?php echo get_the_title(); ?></h1> 
+      <?php get_template_part('/banner/top-banner'); ?>
+      <?php if ( have_posts() ) : ?>
+        <?php while( have_posts() ) : the_post(); ?>
+            <div class="detail-content"><?php the_content(); ?></div>
+        <?php endwhile;?>
+      <?php endif; ?>
+      <?php get_template_part('/banner/middle-banner'); ?>
+      <?php get_template_part('/inc/related-detail'); ?>
+      <?php get_template_part('/banner/bottom-banner'); ?>
+      <?php get_template_part('/inc/content-search-bot'); ?>
+    </div>
+    <?php get_template_part('/banner/side-banner'); ?>
+  </div><!-- #primary -->
+</div>
 </div><!-- .wrap -->
 
 <?php get_footer();
