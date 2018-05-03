@@ -81,8 +81,23 @@ get_header(); ?>
 
 			endif;
 			?>
-            <div class="content-more">
-              <a href="#" class="content-more_lnk">
+          <div class="content-more js-lnk js-comic">
+              <a href="/archives/tag/comic/" class="content-more_lnk ">
+                もっと見る
+              </a>
+          </div>
+          <div class="content-more js-lnk js-anime">
+              <a href="/archives/tag/anime/" class="content-more_lnk ">
+                もっと見る
+              </a>
+          </div>
+          <div class="content-more js-lnk js-app">
+              <a href="/archives/tag/app/" class="content-more_lnk ">
+                もっと見る
+              </a>
+          </div>
+          <div class="content-more js-lnk js-pachinko">
+              <a href="/archives/tag/pachinko/" class="content-more_lnk ">
                 もっと見る
               </a>
           </div>

@@ -50,11 +50,18 @@
       display: block;
       max-width: 100%;
       height: auto;
-      margin: 10px 0;
+      margin: 10px auto;
+    }
+    strong {
+      font-weight: bold;
+      color: #fb28d4;
     }
     a {
       color: #83ecd4;
       text-decoration: none;
+    }
+    .wp-caption-text {
+      font-size: 10px;
     }
   }
   &-related {

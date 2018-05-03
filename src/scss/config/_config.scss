@@ -6,6 +6,10 @@ body {
 
 * { font-family: "Noto Sans Japanese"; }
 .wf-nicomoji { font-family: "Nico Moji"; }
+figure {
+    margin: 0 auto;
+    width: auto!important;
+}
 
 h1,h2,h3,h4,h5,p,a {
 	margin: 0;

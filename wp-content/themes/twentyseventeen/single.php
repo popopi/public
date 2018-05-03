@@ -25,7 +25,7 @@ get_header(); ?>
       <p class="detail-date"><?php the_time('Y/m/d'); ?></p>
       <ul class="tag-lst lst_detail">
         <?php
-          $posttags = get_tags();
+          $posttags = get_the_tags();
             if ($posttags) {
               foreach($posttags as $tag) {
               echo '<li><a href="'. get_tag_link($tag->term_id) .'">' .   $tag->name . '</a>'. "</li>";

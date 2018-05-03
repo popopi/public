@@ -10,9 +10,15 @@
       .tag-comic {
         display: block;
       }
+      .js-comic.content-more {
+        display: block;
+      }
     }
     &.js-anime {
       .tag-anime {
+        display: block;
+      }
+      .js-anime.content-more {
         display: block;
       }
     }
@@ -20,9 +26,20 @@
       .tag-app {
         display: block;
       }
+      .js-app.content-more {
+        display: block;
+      }
     }
     &.js-pachinko {
       .tag-pachinko {
+        display: block;
+      }
+      .js-pachinko.content-more {
+        display: block;
+      }
+    }
+    &.content-archive {
+      .entry-article {
         display: block;
       }
     }
@@ -121,6 +138,7 @@
   }
 }
 .content-more {
+  display: none;
   width: 100%;
   &_lnk{
     display: block;

@@ -98,8 +98,10 @@
         border: 1px solid transparent;
     }
   @media screen and (max-width: 768px) {
+    overflow-x: hidden;
     img {
       width: 150%;
+      margin-left: -23%;
     }  
   }
 }

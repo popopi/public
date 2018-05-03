@@ -18,13 +18,13 @@ gulp.task("server", function() {
 gulp.task("sass", function() {
     gulp.src("src/scss/common.scss")
         .pipe(plumber())
-        .pipe(frontnote({css: '../wp-content/themes/twentyseventeen/assets/css/common.css'}))
+        .pipe(frontnote({css: '../popoi_wp/wp-content/themes/twentyseventeen/assets/css/common.css'}))
         .pipe(sass())
         .pipe(autoprefixer())
 		.pipe(minifyCSS({
 		  	keepBreaks: false
 		}))
-        .pipe(gulp.dest("wp-content/themes/twentyseventeen/assets/css"))
+        .pipe(gulp.dest("popoi_wp/wp-content/themes/twentyseventeen/assets/css"))
         .pipe(browser.reload({stream:true}));
 });
 
@@ -32,7 +32,7 @@ gulp.task("js", function() {
     gulp.src(["src/js/**/*.js"])
 		.pipe(plumber())
         .pipe(uglify())
-        .pipe(gulp.dest('wp-content/themes/twentyseventeen/assets/js/'))
+        .pipe(gulp.dest('popoi_wp/wp-content/themes/twentyseventeen/assets/js/'))
         .pipe(browser.reload({stream:true}));
 });
 

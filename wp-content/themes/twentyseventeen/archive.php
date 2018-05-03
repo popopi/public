@@ -9,22 +9,21 @@
  * @since 1.0
  * @version 1.0
  */
-
 get_header(); ?>
-
-<div class="wrap">
-
-	<?php if ( have_posts() ) : ?>
+<div class="wrap wrap-search_content">
+    <?php if ( have_posts() ) : ?>
 		<div class="page-header">
 			<?php
-				the_archive_title( '<h1 class="page-title">', '</h1>' );
+				the_archive_title( '<h2 class="wrap-search_ttl">', '</h1>' );
 				the_archive_description( '<div class="taxonomy-description">', '</div>' );
 			?>
 		</div><!-- .page-header -->
 	<?php endif; ?>
-
-	<div id="primary" class="content-area">
-		<div id="main" class="site-main" role="main">
+</div>
+<?php get_template_part('/banner/top-banner'); ?>
+<div class="wrap">
+    <div id="primary" class="content-area clearfix">
+		<div class="site-main content-archive" role="main">
 
 		<?php
 		if ( have_posts() ) : ?>
@@ -52,8 +51,11 @@ get_header(); ?>
 			get_template_part( 'template-parts/post/content', 'none' );
 
 		endif; ?>
-
+          <?php get_template_part('/banner/middle-banner'); ?>
+          <?php get_template_part('/inc/content-search-bot'); ?>
+          <?php get_template_part('/banner/bottom-banner'); ?>
 		</div><!-- #main -->
+      <?php get_template_part('/banner/side-banner'); ?>
 	</div><!-- #primary -->
 </div><!-- .wrap -->
 
