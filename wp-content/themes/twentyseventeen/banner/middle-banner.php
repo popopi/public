@@ -1,5 +1,6 @@
 <div class="middle-banner">
-  <a href="<?php the_field('middlepbanner-link',37); ?>" target="_blank">
-    <img src="<?php the_field('middlebanner-img',37); ?>" alt="バナー">
-  </a>
+<script type="text/javascript">
+var nend_params = {"media":51711,"site":284875,"spot":874676,"type":1,"oriented":1};
+</script>
+<script type="text/javascript" src="https://js1.nend.net/js/nendAdLoader.js"></script>
 </div>

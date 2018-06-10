@@ -1,14 +1,10 @@
 .top-banner {
   max-width: 1000px;
   width: 100%;
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
   margin: 50px auto 0;
-  img {
-    width: 100%;
-    height: auto;
-  }
 }
 .middle-banner {
   max-width: 1000px;
@@ -34,6 +30,14 @@
 @media screen and (max-width: 768px) {
   .top-banner {
     margin: 0 auto 0;
+      .nendAdContainer.nend_adcontainer_fullwidth_portrait {
+          width: 100%!important;
+          height: auto;
+      }
+   img {
+        width: 100%;
+        height: auto;
+      }
   }
   .middle-banner {
     margin: 20px auto 10px;

@@ -15,7 +15,7 @@ get_header(); ?>
   <?php if ( have_posts() ) : ?>
 			<h2 class="wrap-search_ttl"><?php printf( __( '検索結果: %s', 'twentyseventeen' ), get_search_query() ); ?></h2>
 		<?php else : ?>
-			<h2 class="wrap-search_ttl"><?php _e( '記事が見つかりませんでした。', 'twentyseventeen' ); ?></h2>
+            <h2 class="wrap-search_ttl"><?php printf( __( '検索結果: %s<br>記事が見つかりませんでした。', 'twentyseventeen' ), get_search_query() ); ?></h2>
   <?php endif; ?>
 </div>
 <?php get_template_part('/banner/top-banner'); ?>

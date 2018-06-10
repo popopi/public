@@ -12,10 +12,12 @@ $(function() {
   });
   $(document).on("click", '.wrap-search > ul > li', function () {
     var class_name =  $(this).attr("class");
-    console.log(class_name);
     $('.wrap-search > ul > li').removeClass('is-active');
     $(this).addClass('is-active');
-    $(this).parents('.wrap-search').next().find('.site-main').removeClass('js-anime js-comic js-app js-pachinko').addClass(class_name);
-    
+    $(this).parents('.wrap-search').next().find('.site-main').removeClass('js-all js-anime js-comic js-app').addClass(class_name);
   });
+  $(document).on("click", '.header-search-btn', function () {
+      $('.js-sp-search').slideToggle();
+  });
+
 });
