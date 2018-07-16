@@ -81,10 +81,10 @@
       <meta property="og:description" content="POPOIPOIPOS（ポポイポイポス）は、20代がおくる、漫画、アニメ、アプリの紹介、レビューメディアサイトになります。通勤時間、寝る前などの暇な時間を漫画、アプリ、アニメ、動画を見て過ごしているあなたへ。おすすめしたい様々な作品を本サイトで紹介、レビューしていきます。是非、本サイトを参考に新たな作品と出会い、暇な時間を有意義に使ってください！">
       <meta property="og:type" content="website">
       <link rel="canonical" href="https://popoipoiposu.com/">
-      <link rel="stylesheet" href="/popoi_wp/wp-content/themes/twentyseventeen/assets/css/common.css">
+      <link rel="stylesheet" href="/popoi_wp/wp-content/themes/twentyseventeen/assets/css/common.css?201806172">
       <link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet" />
       <script type="text/javascript" src="/popoi_wp/wp-content/themes/twentyseventeen/assets/js/jquery.js"></script>
-      <script type="text/javascript" src="/popoi_wp/wp-content/themes/twentyseventeen/assets/js/common.js"></script>
+      <script type="text/javascript" src="/popoi_wp/wp-content/themes/twentyseventeen/assets/js/common.js?20180617"></script>
   </head>
 
 <body <?php body_class(); ?>>

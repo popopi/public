@@ -1,6 +1,8 @@
 <div class="button-area">
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
   <div class="button-area_btn">
-    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-show-count="false">ツイートする</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-url="<?php the_permalink() ?>" data-size="large" data-show-count="false" data-hashtags="ポポイポイポス">ツイートする</a> 
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   </div>
   <div class="button-area_btn">
     <div id="fb-root"></div>

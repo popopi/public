@@ -1,9 +1,13 @@
+.top-bnr-block {
+    width: 100%;
+}
 .top-banner {
   max-width: 1000px;
   width: 100%;
   display: block;
   justify-content: center;
   align-items: center;
+  text-align: center;
   margin: 50px auto 0;
 }
 .middle-banner {
@@ -19,6 +23,9 @@
   }
 }
 .side-banner {
+  postion: -webkit-sticky;
+  position: sticky;
+  top: 30px;
   width: 13%;
   max-width: 160px;
   float: right;
@@ -30,6 +37,7 @@
 @media screen and (max-width: 768px) {
   .top-banner {
     margin: 0 auto 0;
+    text-align: center;
       .nendAdContainer.nend_adcontainer_fullwidth_portrait {
           width: 100%!important;
           height: auto;
@@ -40,10 +48,7 @@
       }
   }
   .middle-banner {
-    margin: 20px auto 10px;
-    &._bottom {
-      display: none;
-    }
+    margin: 30px auto 30px;
   }
   .side-banner {
     display: none;

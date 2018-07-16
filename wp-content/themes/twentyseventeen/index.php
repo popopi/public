@@ -19,7 +19,7 @@ get_header(); ?>
 
 <main>
   <ul class="main-slider">
-    <?php query_posts('showposts=3'); 
+    <?php query_posts('showposts=6'); 
       if (have_posts()) : 
       while (have_posts()) : 
       the_post(); ?>
